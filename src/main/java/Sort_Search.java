@@ -28,17 +28,17 @@ public class Sort_Search {
         }
     }  
     static int linearSearch(int[] arr, int val) {
-        for (int i = 0; i < arr.length; i++) {
-            if (val == arr[i]) {
-                return i;
+        for (int i = 0; i < arr.length; i++) { // n
+            if (val == arr[i]) { // 1
+                return i; // 1
             }
         }
         
-        return -1;
-    }
+        return -1; // 1
+    } // n + 1 + 1 + 1 = n + 3 = O(n)
     
     static int binarySearch(int[] arr, int val) {
-        int start = 0;
+        int start = 0; 
         int end = arr.length-1;
         
         while(start <= end) {
@@ -57,7 +57,8 @@ public class Sort_Search {
         }
         
         return -1;
-    }
+    } // 2^x = n      O(logn)
+    // logn is more efficient than n
     
     static void printArray(int[] arr) {
          for (int i = 0; i < arr.length; i++) {
